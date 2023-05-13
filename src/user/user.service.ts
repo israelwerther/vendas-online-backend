@@ -9,7 +9,6 @@ export class UserService {
 
     async createUser(createUserDto: CreateUserDto): Promise<User> {
         const saltOrRounds = 10;
-
         const passwordHashed = await hash(createUserDto.password, saltOrRounds);
 
         const user = {
