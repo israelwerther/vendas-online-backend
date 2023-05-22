@@ -25,7 +25,6 @@ export class UserService {
   }
 
   async getAllUser(): Promise<UserEntity[]> {
-    console.log('Entrou no service');
     return this.userRepository.find();
   }
 }
